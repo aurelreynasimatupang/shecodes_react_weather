@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import BottomRight from "./BottomRight";
-import axios from "axios";
 
 export default function AppBottom(props) {
-  const [data, setData] = useState({});
-
   function dateFunc(currentDate) {
     let date = new Date(currentDate * 1000);
     let hours = date.getHours();
@@ -27,38 +24,23 @@ export default function AppBottom(props) {
     }
     return `Last Updated: ${days[day]} ${hours}:${minutes}`;
   }
-  function updateWeather(response) {
-    setData({
-      city: response.data.name,
-      temp: response.data.main.temp,
-      hum: response.data.main.humidity,
-      wind: response.data.main.wind.speed,
-      imgSrc: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      time: dateFunc(response.data.dt),
-      coord: response.data.coord,
-    });
-  }
-
-  const apiKey = "2d2ec576fd367f2433f859ba0c9d13e4";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(updateWeather);
 
   return (
     <div className="AppBottom">
       <div className="BottomLeft">
-        <h1 id="selected-city">{data.city}</h1>
+        <h1 id="selected-city">{props.weather.city}</h1>
         <div className="AppBottomLeftTop">
-          <img src={data.imgSrc} alt="icon" />
+          <img src={props.weather.imgSrc} alt="icon" />
           <br />
-          <h1 id="mainTemp">{data.temp}</h1>
+          <h1 id="mainTemp">{props.weather.temp}</h1>
           <h2 className="tempUnit">°C\°F</h2>
-          <h2 id="date">{data.time}</h2>
+          <h2 id="date">{dateFunc(props.weather.time)}</h2>
         </div>
         <div className="AppBottomLeftBottom">
           <p>
-            Humidity:{data.hum}%
+            Humidity:{props.weather.hum}%
             <br />
-            Wind:{data.wind} km/h
+            Wind:{props.weather.wind} km/h
           </p>
         </div>
       </div>
