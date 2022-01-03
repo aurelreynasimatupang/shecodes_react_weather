@@ -49,6 +49,7 @@ p {
   font-weight: 400;
   font-size: 15px;
   padding: 2px 4px;
+  margin: 0px 10px;
 }
 
 .searchButton:hover {
@@ -111,7 +112,7 @@ button:hover {
   position: relative;
   float: right;
   top: -38px;
-  right: 40px;
+  right: 90px;
 }
 
 .AppBottom {
