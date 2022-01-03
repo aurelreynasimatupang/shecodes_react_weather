@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <Widget />
-      <p class="footer">Coded by: Aurel Reyna.</p>
+      <p className="footer">Coded by: Aurel Reyna.</p>
     </div>
   );
 }

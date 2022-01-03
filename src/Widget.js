@@ -2,34 +2,36 @@ import React, { useState } from "react";
 import AppBottom from "./bottom/AppBottom";
 
 export default function Widget() {
-  //let choice = ["Jakarta", "Beijing", "Amsterdam", "Hanoi"];
-  let [city, setCity] = useState("");
-  let [result, setResult] = useState("Jakarta");
+  let [city, setCity] = useState("Jakarta");
+  let [result, setResult] = useState("");
 
   function updateCity(event) {
     setCity(event.target.value);
   }
   function submitCity(event) {
     event.preventDefault();
+    submit();
+  }
+  function submit() {
     setResult(city);
   }
 
   return (
     <div className="Widget">
       <div className="TopLeft">
-        <div class="row">
-          <div class="col-3">
-            <span class="selected" id="jakarta">
+        <div className="row">
+          <div className="col-3">
+            <span className="selected" id="jakarta">
               Jakarta
             </span>
           </div>
-          <div class="col-3" id="beijing">
+          <div className="col-3" id="beijing">
             Beijing
           </div>
-          <div class="col-3" id="amsterdam">
+          <div className="col-3" id="amsterdam">
             Amsterdam
           </div>
-          <div class="col-3" id="hanoi">
+          <div className="col-3" id="hanoi">
             Hanoi
           </div>
         </div>
@@ -40,10 +42,10 @@ export default function Widget() {
             type="text"
             id="city-input"
             placeholder="enter city"
-            class="form"
+            className="form"
             onChange={updateCity}
           />
-          <input type="submit" value="search" class="searchButton" />
+          <input type="submit" value="search" className="searchButton" />
         </form>
         <button>current</button>
       </div>
