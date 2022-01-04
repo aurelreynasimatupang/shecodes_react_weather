@@ -1,5 +1,5 @@
 body {
-  background-color: #64d2fb;
+  background: url(img/sky.jpeg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,7 +110,7 @@ button:hover {
 }
 
 .TopLeft {
-  background-color: rgba(250, 250, 250, 0.7);
+  background-color: rgba(204, 224, 248, 0.7);
   width: 400px;
   height: 50px;
   margin: 50px auto;
@@ -128,7 +128,7 @@ button:hover {
 }
 
 .AppBottom {
-  background-color: rgba(250, 250, 250, 0.7);
+  background-color: rgba(204, 224, 248, 0.7);
   width: 700px;
   height: 450px;
   border-bottom-left-radius: 20px;
@@ -160,7 +160,11 @@ button:hover {
 }
 
 .cardDay {
-  background-color: rgba(19, 39, 67, 1);
+  background: linear-gradient(
+    112.1deg,
+    rgba(19, 39, 67) 11.4%,
+    rgba(63, 76, 119) 70.2%
+  );
   color: whitesmoke;
   height: 60px;
   width: 350px;
@@ -168,7 +172,11 @@ button:hover {
 }
 
 .cardDay:hover {
-  background-color: rgba(19, 39, 67, 0.6);
+  background: linear-gradient(
+    112.1deg,
+    rgba(19, 39, 67, 0.7) 11.4%,
+    rgba(63, 76, 119, 0.7) 70.2%
+  );
 }
 
 .footer {
