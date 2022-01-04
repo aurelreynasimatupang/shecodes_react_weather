@@ -21,9 +21,29 @@ h2 {
   color: #667fa0;
   font-size: 18px;
 }
+h3 {
+  color: whitesmoke;
+  display: inline;
+  margin-right: 10px;
+}
+
+h4 {
+  color: whitesmoke;
+  display: inline;
+  margin-right: 10px;
+  font-weight: 200;
+  font-size: 20px;
+}
 
 p {
   color: #566270;
+}
+.tempUnit {
+  display: inline;
+  font-size: 15px;
+  position: relative;
+  top: -17px;
+  left: 5px;
 }
 
 .sun {
@@ -77,14 +97,6 @@ button:hover {
 }
 .selected {
   border-bottom: solid #132743 4px;
-}
-
-.tempUnit {
-  display: inline;
-  font-size: 15px;
-  position: relative;
-  top: -17px;
-  left: 5px;
 }
 
 .Widget {
@@ -157,20 +169,6 @@ button:hover {
 
 .cardDay:hover {
   background-color: rgba(19, 39, 67, 0.6);
-}
-
-h3 {
-  color: whitesmoke;
-  display: inline;
-  margin-right: 10px;
-}
-
-h4 {
-  color: whitesmoke;
-  display: inline;
-  margin-right: 10px;
-  font-weight: 200;
-  font-size: 20px;
 }
 
 .footer {

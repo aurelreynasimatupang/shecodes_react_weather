@@ -14,7 +14,7 @@ export default function Widget() {
       hum: response.data.main.humidity,
       des: response.data.weather[0].description,
       wind: response.data.wind.speed,
-      imgSrc: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       time: response.data.dt,
       coord: response.data.coord,
     });
