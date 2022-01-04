@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default function Widget() {
   let [data, setData] = useState({ ready: false });
+  let [city, setCity] = useState("Jakarta");
 
   function updateWeather(response) {
     setData({
@@ -11,19 +12,23 @@ export default function Widget() {
       city: response.data.name,
       temp: response.data.main.temp,
       hum: response.data.main.humidity,
-      wind: response.data.main.wind.speed,
+      des: response.data.weather[0].description,
+      wind: response.data.wind.speed,
       imgSrc: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       time: response.data.dt,
       coord: response.data.coord,
     });
+    console.log(response.data);
   }
   function submitCity(event) {
     event.preventDefault();
     const apiKey = "2d2ec576fd367f2433f859ba0c9d13e4";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Jakarta&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(updateWeather);
   }
-  function updateCity(event) {}
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
 
   if (data.ready) {
     return (
