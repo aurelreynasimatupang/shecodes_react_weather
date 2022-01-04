@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function BottomRight() {
-  let [forecast, setForecast] = useState("null");
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-
   return (
     <span className="BottomRight">
       <div className="card cardDay">

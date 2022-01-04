@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FormatDate(currentDate) {
   let date = new Date(currentDate * 1000);
   let hours = date.getHours();
