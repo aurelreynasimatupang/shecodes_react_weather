@@ -27,6 +27,11 @@ h3 {
   margin-right: 10px;
 }
 
+.min {
+  font-size: 18px;
+  font-weight: 100;
+}
+
 h4 {
   color: whitesmoke;
   display: inline;

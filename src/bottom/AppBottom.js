@@ -1,5 +1,5 @@
 import React from "react";
-import BottomRight from "./BottomRight";
+import Forecast from "./Forecast";
 import TempUnit from "./elements/TempUnit";
 import FormatDate from "./elements/FormatDate";
 import WeatherIcon from "./elements/WeatherIcon";
@@ -11,7 +11,7 @@ export default function AppBottom(props) {
         <h1 id="selected-city">{props.weather.city}</h1>
         <h2 id="date">{props.weather.des}</h2>
         <div className="AppBottomLeftTop">
-          <WeatherIcon code={props.weather.icon} />
+          <WeatherIcon code={props.weather.icon} type="large" />
           <br />
           <TempUnit temp={props.weather.temp} />
           <h2 id="date">{FormatDate(props.weather.time)}</h2>
@@ -24,7 +24,7 @@ export default function AppBottom(props) {
           </p>
         </div>
       </div>
-      <BottomRight />
+      <Forecast coord={props.weather.coord} />
     </div>
   );
 }

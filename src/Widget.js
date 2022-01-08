@@ -18,7 +18,6 @@ export default function Widget() {
       time: response.data.dt,
       coord: response.data.coord,
     });
-    console.log(response.data);
   }
   function submitCity(event) {
     event.preventDefault();
