@@ -29,26 +29,22 @@ export default function Widget() {
     setCity(event.target.value);
   }
 
+  function showPosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=9a3b65ea12488fdd227f03eda47a0bf6&units=metric`;
+    axios.get(apiUrl).then(updateWeather);
+  }
+
+  function currentCity(event) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
   if (data.ready) {
     return (
       <div className="Widget">
         <div className="TopLeft">
-          <div className="row">
-            <div className="col-3">
-              <span className="selected" id="jakarta">
-                Jakarta
-              </span>
-            </div>
-            <div className="col-3" id="beijing">
-              Beijing
-            </div>
-            <div className="col-3" id="amsterdam">
-              Amsterdam
-            </div>
-            <div className="col-3" id="hanoi">
-              Hanoi
-            </div>
-          </div>
+          <h1 className="title"> Weather App</h1>
         </div>
         <div className="TopRight">
           <form id="city-form" onSubmit={submitCity}>
@@ -61,7 +57,7 @@ export default function Widget() {
             />
             <input type="submit" value="search" className="searchButton" />
           </form>
-          <button>current</button>
+          <button onClick={currentCity}>current</button>
         </div>
         <AppBottom weather={data} />
       </div>

@@ -188,3 +188,7 @@ button:hover {
   color: #132743;
   text-align: center;
 }
+
+.title {
+  margin: 25px;
+}
