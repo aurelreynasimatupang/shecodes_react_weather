@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>World Clock - Aurel Reyna</title>
+</head>
+<body>
+    <div class="d-flex flex-center-x">
+        <div class="text-center timezone-app">
+            <h1>World Clock</h1>
+            <select id="city">
+                <option value="">Select a country</option>
+                <option value="current">My current location</option>
+                <option value="Asia/Tokyo">Tokyo</option>
+                <option value="Australia/Sydney">Sydney</option>
+                <option value="Europe/Paris">Paris</option>
+            </select>
+            <div id="cities">
+                <div class="city" id="tokyo">
+                    <h2>Tokyo</h2>
+                    <div class="date"></div>
+                    <div class="time"></small></div>
+                </div>
+                <div class="city" id="paris">
+                    <h2>Paris</h2>
+                    <div class="date"></div>
+                    <div class="time"></div>
+                </div>
+                <div class="city" id="sydney">
+                    <h2>Sydney</h2>
+                    <div class="date"></div>
+                    <div class="time"></div>
+                </div>
+                <div class="city" id="amsterdam">
+                    <h2>Amsterdam</h2>
+                    <div class="date"></div>
+                    <div class="time"></div>
+                </div>
+                <div class="city" id="jakarta">
+                    <h2>Jakarta</h2>
+                    <div class="date"></div>
+                    <div class="time"></div>
+                </div>
+            </div>
+            <div id="return_link"></div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+:root{
+    --background-color:#113f67;
+    --hover-city-color:#e7eaf6;
+    --inactive-font-color:#556187;
+    --active-font-color:#113f67;
+    --app-color:white;
+    --button-color:#a2a8d3;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:var(--background-color);
+    color: var(--active-font-color);
+}
+
+.timezone-app {
+    margin-top: 70px;
+    background-color: var(--app-color);
+    width: 600px;
+    border-radius: 12px;
+    padding: 15px 20px 15px 20px;
+}
+
+#city {
+    width: 80%;
+    height: 30px;
+}
+
+#countries {
+    width: 80%;
+    height:40px;
+}
+#return_link {
+    color: var(--button-color);
+    font-size: 20px;
+    text-decoration: underline;
+}
+#return_link:hover {
+    cursor: pointer;
+}
+
+.city {
+    display: flex;
+    align-items: center;
+    margin: 15px 12px 15px 12px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 12px;
+    color: var(--inactive-font-color);
+}
+
+.city:hover {
+    background-color: var(--hover-city-color);
+    color: var(--active-font-color);
+    cursor: pointer;
+}
+
+.city h2 {
+    width: 200px;
+    text-align: left;
+}
+
+.city .date {
+    width: 100px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.city .time {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+
+.text-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+.flex-center{
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-x{
+    justify-content: center;
+}
